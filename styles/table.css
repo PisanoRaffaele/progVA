@@ -1,0 +1,73 @@
+.lap-table-wrap {
+	border: 1px solid rgba(255, 255, 255, 0.06);
+	border-radius: 6px;
+	overflow: hidden;
+	background: rgba(0, 0, 0, 0.03);
+}
+
+.lap-table-scroller {
+	overflow: auto;
+	height: 18vh;
+}
+
+.lap-table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+	font-size: 13px;
+	color: #f8f8f8;
+}
+
+.lap-table thead th {
+	position: sticky;
+	top: 0;
+	background: rgba(0, 0, 0, 0.25);
+	backdrop-filter: blur(4px);
+	z-index: 2;
+	padding: 6px 4px;
+	text-align: center;
+	font-weight: 600;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+	cursor: pointer;
+}
+
+.lap-table tbody td {
+	padding: 6px 4px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.lap-table tbody tr:hover {
+	background: rgba(255, 255, 255, 0.02);
+}
+
+.selected-row {
+	background: rgba(255, 255, 0, 0.178) !important;
+}
+
+.selected-row:hover {
+	background: rgba(255, 255, 0, 0.281) !important;
+}
+
+.lap-table th.sort-asc::after {
+	content: " ▲";
+	font-size: 10px;
+	color: #ddd;
+}
+
+.lap-table th.sort-desc::after {
+	content: " ▼";
+	font-size: 10px;
+	color: #ddd;
+}
+
+.lap-table .small {
+	font-size: 11px;
+	opacity: 0.9;
+	color: #ddd;
+}

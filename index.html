@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>F1 Visual Analytics</title>
+
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/menu.css">
+  <link rel="stylesheet" href="styles/table.css">
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <!-- Top Navigation / Filter Menu -->
+  <header class="topbar">
+    <div class="logo">
+      <img src="assets/logos/f1.png" alt="F1 Logo" height="40">
+    </div>
+	<div class="current-selection"></div>
+    <nav class="filters">
+      <div class="dropdown">
+		<button id="dropbtn-driver" class="dropbtn">Drivers</button>
+		<div id="driverDropdown" class="dropdown-content"></div>
+	  </div>
+
+      <div class="dropdown">
+		<button id="dropbtn-team" class="dropbtn">Teams</button>
+		<div id="teamDropdown" class="dropdown-content"></div>
+	  </div>
+
+      <div class="dropdown">
+		<button id="dropbtn-track" class="dropbtn">Tracks</button>
+		<div id="trackDropdown" class="dropdown-content"></div>
+	  </div>
+
+      <div class="dropdown">
+		<button id="dropbtn-tyre" class="dropbtn">Tyre Compound</button>
+		<div id="tyreDropdown" class="dropdown-content"></div>
+	  </div>
+
+	  <div class="dropdown">
+		<button id="dropbtn-laps" class="dropbtn">Laps</button>
+		<div id="lapsDropdown" class="dropdown-content"></div>
+	  </div>
+
+	  <div class="dropdown">
+		<button id="dropbtn-weather" class="dropbtn">Weather</button>
+		<div id="weatherDropdown" class="dropdown-content"></div>
+	  </div>
+
+	  <div class="dropdown">
+		<button id="dropbtn-temp" class="dropbtn">Temperature</button>
+		<div id="tempDropdown" class="dropdown-content"></div>
+	  </div>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main id="charts">
+		<div id="container12">
+			<div id="container1"></div>
+			<div id="container2"></div>
+		</div>
+		<div id="container3456">
+			<div id="container34">
+				<div id="container3"></div>
+				<div id="container4"></div>
+			</div>
+			<div id="container5"></div>
+			<div id="splom-container">
+				<div id="splom"></div>
+				<div id="heatmap-legend"></div>
+				<div id="pairView">
+				</div>
+			</div>
+		</div>
+  </main>
+
+  <script src="scripts/utils.js"></script>
+  <script src="scripts/script.js"></script>
+  <script src="scripts/menu.js"></script>
+  <script src="scripts/SPLOM.js"></script>
+  <script src="scripts/boxplot.js"></script>
+  <script src="scripts/table.js"></script>
+</body>
+</html>

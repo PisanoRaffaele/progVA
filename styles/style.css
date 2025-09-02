@@ -1,0 +1,190 @@
+/* Reset base */
+
+:root {
+  --whiteCustom: #FBFEF9;
+  --blackCustom: #191923;
+  --lightBlackCustom: #282831;
+  --redF1Custom: #E10600;
+  --azureCustom: #0E79B2;
+  --orangeCustom: #F39237;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: var(--blackCustom);
+  color: var(--whiteCustom);
+}
+
+header {
+  width: 100vw;
+  height: 6.5vh;
+}
+/* ********************** Main ********************** */
+
+/* insert containers in column */
+#charts {
+    background: var(--blackCustom);
+    width: 100vw;
+    height: 93.5vh;
+    display: flex;
+    flex-direction: column;
+}
+/* get all width of the page */
+
+#container12, #container3456 {
+  display: flex;
+  flex-direction: row;
+}
+
+#container34 {
+  display: flex;
+  flex-direction: column;
+}
+
+#container1 {
+  margin-left: 1vw;
+  margin-right: 0.5vw;
+  margin-top: 1vh;
+  margin-bottom: 0.5vh;
+  width: 50vw;
+  height: 35vh;
+  padding: 10px;
+  background: var(--lightBlackCustom);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px var(--lightBlackCustom);
+}
+
+#container2 {
+  margin-left: 0.5vw;
+  margin-right: 1vw;
+  margin-top: 1vh;
+  margin-bottom: 0.5vh;
+  width: 47vw;
+  height: 35vh;
+  padding: 10px;
+  background: var(--lightBlackCustom);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px var(--lightBlackCustom);
+}
+
+#container3 {
+  margin-left: 1vw;
+  margin-right: 0.5vw;
+  margin-top: 0.5vh;
+  margin-bottom: 0.5vh;
+  width: 41vw;
+  height: 23vh;
+  padding: 10px;
+  background: var(--lightBlackCustom);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px var(--lightBlackCustom);
+}
+
+#container4 {
+  margin-left: 1vw;
+  margin-right: 0.5vw;
+  margin-top: 0.5vh;
+  margin-bottom: 1vh;
+  width: 41vw;
+  height: 30.5vh;
+  padding: 10px;
+  background: var(--lightBlackCustom);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px var(--lightBlackCustom);
+}
+
+#container5 {
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+  margin-top: 0.5vh;
+  margin-bottom: 1vh;
+  width: 28vw;
+  height: 54.5vh;
+  padding: 10px;
+  background: var(--lightBlackCustom);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px var(--lightBlackCustom);
+}
+
+#splom-container {
+  margin-left: 0.5vw;
+  margin-right: 1vw;
+  margin-top: 0.5vh;
+  margin-bottom: 1vh;
+  height: 54.5vh;
+  width: 28vw;
+  padding: 10px;
+  background: var(--lightBlackCustom);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px var(--lightBlackCustom);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+#splom-main g rect {
+  cursor: pointer;
+}
+
+#splom-main g rect:hover {
+  cursor: pointer;
+  stroke: var(--azureCustom);
+}
+
+#pairView {
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#backToSPLOM {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.back-icon-div {
+    padding: 5px;
+    background-color: var(--lightBlackCustom);
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--azureCustom);
+    border-color: var(--azureCustom);
+    border-width: 2px;
+    border-style: solid;
+    cursor: pointer;
+}
+
+
+/*************** Dropdown Styles ***************/
+
+#splom svg {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: var(--whiteCustom);
+  shape-rendering: crispEdges;
+}
+
+.cell {
+  stroke: var(--whiteCustom);
+}
+
+.cell circle {
+  fill: var(--azureCustom);
+  fill-opacity: 0.6;
+}
+
+
