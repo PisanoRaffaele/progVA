@@ -7,8 +7,13 @@
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/menu.css">
   <link rel="stylesheet" href="styles/table.css">
+  <link rel="stylesheet" href="styles/parallelCoordinates.css">
+  <link rel="stylesheet" href="styles/pca.css">
+  <link rel="stylesheet" href="styles/legend.css">
 
   <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
 </head>
 <body>
   <!-- Top Navigation / Filter Menu -->
@@ -58,20 +63,93 @@
   <!-- Main content -->
   <main id="charts">
 		<div id="container12">
-			<div id="container1"></div>
-			<div id="container2"></div>
+			<div id="container1">
+				<i id="info-icon-boxplot" class="fa-solid fa-circle-info fa-xl"></i>
+				<div id="info-container-boxplot">
+					This chart recalculates dynamically when laps are selected (from menus or other charts). It shows, for each driver, the distribution of LapTime* values.
+					<br><br>LapTime* is the difference in seconds between a lap time and the average lap time of that race.
+				</div>
+			</div>
+			<div id="containerLegend"></div>
+			<div id="container2">
+				<i id="info-icon-parallel" class="fa-solid fa-circle-info fa-xl"></i>
+				<div id="info-container-parallel">
+					This chart shows all laps simultaneously across multiple variables (lap number, tyre, tyre life, track, weather, temperature, LapTime*).
+					Each line is one lap. You can interactively select laps directly from this chart.
+					<br><br>LapTime* is the difference in seconds between a lap time and the average lap time of that race.
+				</div>
+			</div>
 		</div>
 		<div id="container3456">
 			<div id="container34">
-				<div id="container3"></div>
-				<div id="container4"></div>
-			</div>
-			<div id="container5"></div>
-			<div id="splom-container">
-				<div id="splom"></div>
-				<div id="heatmap-legend"></div>
-				<div id="pairView">
+				<div id="container3">
+					<div id="info-container-table">
+						This table allows you to browse all laps with their details (driver, team, track, tyre, tyre life, temperature, weather, cluster).
+						<br>You can select laps by clicking on rows or sort values in ascending/descending order by clicking on column headers.
+						<br>Selected laps are highlighted in all charts and can be cleared with the "Clear Selection" button.
+						<br><br>LapTime* is the difference in seconds between a lap time and the average lap time of that race.
+						<br>The "Cluster" column shows the cluster assigned by the K-Means algorithm (if run) or empty otherwise.
+					</div>
 				</div>
+				<div id="Container4" style="flex-direction: row">
+					<div id="container4">
+						<i id="info-icon-tyre" class="fa-solid fa-circle-info fa-xl"></i>
+						<div id="info-container-tyre">
+							For the selected laps (from menus or other charts), this plot shows the degradation trend of each tyre compound, i.e. how LapTime* changes with tyre life.
+							<br>A regression line is computed to estimate and show the degradation rate.
+							<br><br>LapTime* is the difference in seconds between a lap time and the average lap time of that race.
+						</div>
+					</div>
+					<div id="Container4ab" style="flex-direction: column">
+						<div id="container4a">
+							<div id="lap-table-controls">
+								<i id="info-icon-table" class="fa-solid fa-circle-info fa-xl"></i>
+								<button id="select-all-button">Select All</button>
+								<button id="remove-all-button">Clear Selection</button>
+							</div>
+						</div>
+						<div id="container4b"></div>
+					</div>
+				</div>
+			</div>
+			<div id="container5">
+				<div id="PCAcontrols">
+					<i id="info-icon-pca" class="fa-solid fa-circle-info fa-xl"></i>
+					<div style="flex-direction: row">
+						<div id="PCAkmeansDiv" style="flex-direction: column;">
+							<div style="flex-direction: column;">
+								<label>K: </label>
+								<input type="number" value="3" id="kInput" style="width: 4vw" min="1" max="8">
+								<button id="kmeansButton">Run K-Means</button>
+							</div>
+						</div>
+						<div id="PCAselectDiv">
+							<span class="sil">Silhouette: #####</span>
+							<label>| Color by: </label>
+							<select id="colorSelect">
+								<option value="none">None</option>
+								<option value="cluster">Cluster</option>
+								<option value="team">Team</option>
+								<option value="track">Track</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<svg height="18vw" width="18vw" id="pcaScatter"></svg>
+				<div style="height: 18vw; width: 18vw;" id="info-container-pca">
+					This chart projects laps into the first two principal components (PC1, PC2) to reduce dimensionality.
+					<br>You can color points by cluster, team, or track, run K-Means clustering (K=1–8), and use the brush tool to select laps.
+				</div>
+			</div>
+			<div id="splom-container">
+				<i id="info-icon-splom" class="fa-solid fa-circle-info fa-xl"></i>
+				<div id="info-container-splom">
+					This chart shows pairwise relationships between LapTime*, lap number, tyre life, track temperature, and weather.
+					Clicking a mini-plot enlarges it, allowing you to select one or more laps with the brush.
+					<br><br>LapTime* is the difference in seconds between a lap time and the average lap time of that race.
+				</div>
+				<div id="splom"></div>
+				<div id="pairView"></div>
 			</div>
 		</div>
   </main>
@@ -82,5 +160,8 @@
   <script src="scripts/SPLOM.js"></script>
   <script src="scripts/boxplot.js"></script>
   <script src="scripts/table.js"></script>
+  <script src="scripts/parallelCoordinates.js"></script>
+  <script src="scripts/tyreDeg.js"></script>
+  <script src="scripts/PCA.js"></script>
 </body>
 </html>

@@ -1,13 +1,18 @@
 .lap-table-wrap {
-	border: 1px solid rgba(255, 255, 255, 0.06);
-	border-radius: 6px;
 	overflow: hidden;
 	background: rgba(0, 0, 0, 0.03);
+	display: flex;
+	flex-direction: row;
+}
+
+table.lap-table {
+	border: 1px solid rgba(255, 255, 255, 0.28);
 }
 
 .lap-table-scroller {
 	overflow: auto;
-	height: 18vh;
+	height: 22vh;
+	padding-left: 0.4vw;
 }
 
 .lap-table {
@@ -15,8 +20,16 @@
 	border-collapse: collapse;
 	table-layout: fixed;
 	font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-	font-size: 13px;
-	color: #f8f8f8;
+	font-size: 0.75vw;
+	color: var(--whiteCustom)
+}
+
+.lap-table tr input {
+	cursor: pointer;
+}
+
+.lap-table td:last-child {
+  	border-right: none;
 }
 
 .lap-table thead th {
@@ -25,16 +38,22 @@
 	background: rgba(0, 0, 0, 0.25);
 	backdrop-filter: blur(4px);
 	z-index: 2;
-	padding: 6px 4px;
+	padding: 4px 4px;
 	text-align: center;
 	font-weight: 600;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 	cursor: pointer;
 }
 
+.lap-table thead th:hover {
+	background: rgba(100, 100, 100, 0.25);
+	backdrop-filter: blur(4px);
+}
+
 .lap-table tbody td {
-	padding: 6px 4px;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+	padding: 2px 4px;
+	border-right: 1px solid rgba(255, 255, 255, 0.12);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -42,16 +61,20 @@
 	text-align: center;
 }
 
+.red-check {
+  accent-color: var(--redF1Custom)
+}
+
 .lap-table tbody tr:hover {
-	background: rgba(255, 255, 255, 0.02);
+	background: rgba(255, 255, 255, 0.07);
 }
 
 .selected-row {
-	background: rgba(255, 255, 0, 0.178) !important;
+	background: rgba(255, 0, 0, 0.178) !important;
 }
 
 .selected-row:hover {
-	background: rgba(255, 255, 0, 0.281) !important;
+	background: rgba(255, 0, 0, 0.281) !important;
 }
 
 .lap-table th.sort-asc::after {
@@ -71,3 +94,64 @@
 	opacity: 0.9;
 	color: #ddd;
 }
+
+
+::-webkit-scrollbar {
+	width: 0.8vw;
+	height: 18vh;
+}
+
+/* track (sfondo) */
+::-webkit-scrollbar-track {
+	background: var(--blackCustom);
+	width: 0.8vw;
+}
+
+/* thumb (la parte che scorre) */
+::-webkit-scrollbar-thumb {
+	background: var(--redF1Custom);
+	border-radius: 4px;
+}
+
+/* thumb hover */
+::-webkit-scrollbar-thumb:hover {
+  	background: #d10000cd;
+}
+
+#lap-table-controls button {
+	padding: 0.5vh 0.25vw;
+    cursor: pointer;
+    border: 2px solid var(--redF1Custom);
+    border-radius: 6px;
+    background-color: var(--lightBlackCustom);
+    justify-content: space-between;
+    color: var(--whiteCustom);
+    font-size: 0.8vw;
+}
+
+#lap-table-controls button:hover {
+	opacity: 0.8;
+}
+
+#lap-table-controls {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: row;
+	width: 15vw;
+}
+
+#lap-table-controls i {
+	cursor: pointer;
+	color: var(--redF1Custom);
+}
+
+#lap-table-controls i:hover {
+	opacity: 0.8;
+}
+
+#info-container-table {
+	display: none;
+}
+
+

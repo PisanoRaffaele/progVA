@@ -53,22 +53,36 @@ header {
   margin-right: 0.5vw;
   margin-top: 1vh;
   margin-bottom: 0.5vh;
-  width: 50vw;
-  height: 35vh;
+  width: 44vw;
+  height: 34vh;
   padding: 10px;
   background: var(--lightBlackCustom);
   border-radius: 8px;
   box-shadow: 0 2px 6px var(--lightBlackCustom);
 }
 
+
+#containerLegend {
+  margin-left: 0vw;
+  margin-right: 0.5vw;
+  margin-top: 1vh;
+  margin-bottom: 0.5vh;
+  width: 7.5vw;
+  height: 34vh;
+  padding: 2px;
+  background: var(--lightBlackCustom);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px var(--lightBlackCustom);
+}
+
 #container2 {
-  margin-left: 0.5vw;
+  margin-left: 0vw;
   margin-right: 1vw;
   margin-top: 1vh;
   margin-bottom: 0.5vh;
-  width: 47vw;
-  height: 35vh;
-  padding: 10px;
+  width: 45.5vw;
+  height: 34vh;
+  padding: 2px;
   background: var(--lightBlackCustom);
   border-radius: 8px;
   box-shadow: 0 2px 6px var(--lightBlackCustom);
@@ -76,41 +90,122 @@ header {
 
 #container3 {
   margin-left: 1vw;
-  margin-right: 0.5vw;
+  margin-right: 0;
   margin-top: 0.5vh;
-  margin-bottom: 0.5vh;
-  width: 41vw;
-  height: 23vh;
-  padding: 10px;
+  margin-bottom: 0vh;
+  width: 52.5vw;
+  height: 24vh;
+  padding: 0.5vw;
   background: var(--lightBlackCustom);
-  border-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   box-shadow: 0 2px 6px var(--lightBlackCustom);
+  display: flex;
+  flex-direction: row
+
+}
+
+#Container4 {
+  margin-left: 1vw;
+  margin-right: 0;
+  margin-top: 0vh;
+  margin-bottom: 1vh;
+  width: 52.5vw;
+  height: 31.5vh;
+  display: flex;
+  flex-direction: row;
 }
 
 #container4 {
-  margin-left: 1vw;
-  margin-right: 0.5vw;
-  margin-top: 0.5vh;
-  margin-bottom: 1vh;
-  width: 41vw;
+  margin-top: 1vh;
+  width: 37vw;
   height: 30.5vh;
   padding: 10px;
   background: var(--lightBlackCustom);
-  border-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   box-shadow: 0 2px 6px var(--lightBlackCustom);
+  display: flex;
+  flex-direction: row;
+}
+
+#Container4ab {
+  width: 14.5vw;
+  height: 30.5vh;
+}
+
+#container4a {
+  margin-left: 0.5vw;
+  width: 15vw;
+  height: 5vh;
+  background: var(--lightBlackCustom);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: flex;
+  flex-direction: row;
+
+}
+
+#container4b {
+  margin-top: 0.5vw;
+  width: 15.5vw;
+  height: 25.5vh;
+  background: var(--lightBlackCustom);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 8px;
+  display: flex;
+  box-shadow: 0 2px 6px var(--lightBlackCustom);
+  flex-direction: row;
+}
+
+.tyre-settings {
+  display: flex;
+  flex-direction: column;
+  width: 15.5vw;
+  padding-inline: 0.5vw;
+}
+
+.tyre-controls {
+  margin-bottom: 0.5vh;
+  font-size: 0.8vw;
+}
+
+.tyre-legend-right-inset {
+  font-size: 0.8vw;
+}
+
+#regTypeSelect {
+  padding: 0.45vh 0.25vw;
+  cursor: pointer;
+  border: 2px solid var(--redF1Custom);
+  border-radius: 6px;
+  background-color: var(--lightBlackCustom);
+  justify-content: space-between;
+  color: var(--whiteCustom);
+  font-size: 0.8vw;
 }
 
 #container5 {
   margin-left: 0.5vw;
-  margin-right: 0.5vw;
+  margin-right: 0;
   margin-top: 0.5vh;
   margin-bottom: 1vh;
-  width: 28vw;
-  height: 54.5vh;
+  width: 19vw;
+  height: 55.5vh;
   padding: 10px;
   background: var(--lightBlackCustom);
   border-radius: 8px;
   box-shadow: 0 2px 6px var(--lightBlackCustom);
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
 }
 
 #splom-container {
@@ -118,15 +213,20 @@ header {
   margin-right: 1vw;
   margin-top: 0.5vh;
   margin-bottom: 1vh;
-  height: 54.5vh;
-  width: 28vw;
-  padding: 10px;
+  padding: 6px;
+  height: 55.5vh;
+  width: 25.5vw;
   background: var(--lightBlackCustom);
   border-radius: 8px;
   box-shadow: 0 2px 6px var(--lightBlackCustom);
-  align-items: center;
-  justify-content: center;
+}
+
+#splom {
+  align-items: end;
+  justify-content: end;
   display: flex;
+  width: 100%;
+  height: 100%;
 }
 
 #splom-main g rect {
@@ -140,35 +240,42 @@ header {
 
 #pairView {
   display: none;
-  justify-content: center;
+  justify-content: end;
   flex-direction: column;
+  align-items: end;
 }
 
 #backToSPLOM {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    margin-top: 8px;
+    width: 90%;
 }
 
 .back-icon-div {
-    padding: 5px;
+    padding: 0.5vh;
     background-color: var(--lightBlackCustom);
     border-radius: 6px;
     font-weight: bold;
     text-align: center;
-    color: var(--azureCustom);
-    border-color: var(--azureCustom);
-    border-width: 2px;
+    background-color: var(--redF1Custom);
+    border-color: var(--redF1Custom);
+    border-width: 0.3vh;
     border-style: solid;
     cursor: pointer;
+    font-size: 2.2vh;
+    color: var(--lightBlackCustom)
 }
 
 
 /*************** Dropdown Styles ***************/
 
 #splom svg {
-  font: 10px sans-serif;
+  font: 1.2vh sans-serif;
+}
+
+#splom svg .axis text {
+  font: 1.4vh sans-serif;
 }
 
 .axis path,
@@ -188,3 +295,105 @@ header {
 }
 
 
+/* INFO CONTAINERS */
+
+#charts i {
+	cursor: pointer;
+	color: var(--redF1Custom);
+}
+
+#charts i:hover {
+	opacity: 0.8;
+}
+
+#container1 i {
+  position: absolute;
+  margin-left: 0.1vw;
+  margin-top: 29.5vh;
+}
+
+#container2 i {
+  position: absolute;
+  margin-left: 0.3vw;
+  margin-top: 30vh;
+}
+
+#splom-container i {
+  position: absolute;
+  margin-left: 0.3vw;
+  margin-top: 2vh;
+}
+
+#container4 i {
+  position: absolute;
+  margin-left: 34vw;
+  margin-top: 1.6vh;
+}
+
+#info-container-tyre {
+  display: none;
+  font-size: 0.9vw;
+  padding: 10px;
+  color: var(--whiteCustom);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#info-container-table {
+  display: none;
+  font-size: 0.9vw;
+  padding: 10px;
+  color: var(--whiteCustom);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+#info-container-boxplot {
+	display: none;
+  font-size: 0.9vw;
+  padding: 10px;
+  color: var(--whiteCustom);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+#info-container-parallel {
+  display: none;
+  font-size: 0.9vw;
+  padding: 10px;
+  color: var(--whiteCustom);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+#info-container-splom {
+  display: none;
+  font-size: 0.9vw;
+  padding: 10px;
+  color: var(--whiteCustom);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+#info-container-pca {
+  display: none;
+  font-size: 0.9vw;
+  padding: 10px;
+  color: var(--whiteCustom);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

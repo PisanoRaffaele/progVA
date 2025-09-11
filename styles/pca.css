@@ -1,0 +1,59 @@
+#PCAkmeansDiv, #PCAselectDiv {
+	font-size: 0.8vw;
+	margin-top: 0.5vh;
+}
+
+#PCAkmeansDiv input{
+	padding: 0.45vh 0.25vw;
+    cursor: pointer;
+	border: 2px solid var(--redF1Custom);
+	border-radius: 6px;
+	background-color: var(--lightBlackCustom);
+	justify-content: space-between;
+	color: var(--whiteCustom);
+	font-size: 0.8vw;
+	margin-inline: 0.5vw;
+	margin-bottom: 0.5vh;
+}
+
+#PCAkmeansDiv button{
+	padding: 0.45vh 0.25vw;
+    cursor: pointer;
+    border: 2px solid var(--redF1Custom);
+    border-radius: 6px;
+    background-color: var(--lightBlackCustom);
+    justify-content: space-between;
+    color: var(--whiteCustom);
+    font-size: 0.8vw;
+}
+
+#PCAselectDiv select{
+	padding: 0.25vh 0.25vw;
+	cursor: pointer;
+	border: 2px solid var(--redF1Custom);
+	border-radius: 6px;
+	background-color: var(--lightBlackCustom);
+	justify-content: space-between;
+	color: var(--whiteCustom);
+	font-size: 0.8vw;
+}
+
+#PCAkmeansDiv button:hover {
+	opacity: 0.8;
+}
+
+#PCAcontrols {
+  flex-direction: row;
+  display: flex;
+  width: 100%;
+}
+
+#info-container-pca {
+	display: none;
+}
+
+#info-icon-pca {
+	cursor: pointer;
+	margin-right: 1vw;
+	color: var(--redF1Custom);
+}

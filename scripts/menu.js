@@ -20,7 +20,7 @@ function populateFilters(data) {
 }
 
 function fillTeamsDropdown(teams) {
-	console.log("Filling teams dropdown with:", teams);
+	//console.log("Filling teams dropdown with:", teams);
 	const container = document.getElementById("teamDropdown");
 	container.innerHTML = "";
 
@@ -165,7 +165,7 @@ function fillDriversDropdown(drivers) {
 function fillTracksDropdown(tracks) {
 	const container = document.getElementById("trackDropdown");
 	container.innerHTML = "";
-	
+
 	const tracks_div = document.createElement("div");
 	tracks.forEach(track => {
 		const div = document.createElement("div");
@@ -585,6 +585,12 @@ function getSelectedTemp2() {
 // #################### APPLY FILTERS ####################
 
 function applyFilters() {
+	selectedIds.clear();
+	clusterColorMap = {};
+	idClusterMap = {};
+	colorBy = "none";
+	d3.select("#container5").select("#PCAselectDiv").select('select').node().value = "none";
+
 	let filtered = [...totalLapsData];
 
 	let lapsRanges = [];
@@ -602,11 +608,11 @@ function applyFilters() {
 					max: parseInt(maxStr.replace('%', ''), 10)
 				});
 			});
-			
+
 		}
 	}
 
-	console.log("Filtering laps between:", lapsRanges);
+	// console.log("Filtering laps between:", lapsRanges);
 	filtered = filtered.filter(d => {
 		const track = d.Track;
 		const trackMaxLap = d3.max(filtered.filter(f => f.Track === track), f => +f.LapNumber);
@@ -637,9 +643,9 @@ function applyFilters() {
 		}
 	}
 
-	console.log("Filtering temperature between:", tempRanges);
+	// console.log("Filtering temperature between:", tempRanges);
 
-	console.log("length of filtered:", filtered.length);
+	// console.log("length of filtered:", filtered.length);
 	filtered = filtered.filter(d => {
 		const temp = +d.TrackTemp;
 		return tempRanges.some(range => temp >= range.min - 0.99 && temp <= range.max);
@@ -666,8 +672,8 @@ function applyFilters() {
 	const selectedWeathers = Array.from(checkboxesW).filter(c => c.checked).map(c => c.value);
 	filtered = filtered.filter(d => selectedWeathers.includes(d.Rainfall));
 
-	console.log("Filtered data:", filtered.length, "laps");
-	console.log("Example:", filtered[0]);
+	// console.log("Filtered data:", filtered.length, "laps");
+	// console.log("Example:", filtered[0]);
 
 	const currentSelection = document.querySelector(".current-selection");
 	currentSelection.innerHTML = `Showing ${filtered.length}/${totalLapsData.length} Laps`;

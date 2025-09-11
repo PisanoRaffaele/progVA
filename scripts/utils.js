@@ -1,3 +1,8 @@
+
+const vwToPx = (vw) => (vw * window.innerWidth) / 100;
+
+const vhToPx = (vh) => (vh * window.innerHeight) / 100;
+
 const teamLogos = {
   "Mercedes": "assets/logos/mercedes.png",
   "Red Bull Racing": "assets/logos/redbull.png",
@@ -108,9 +113,78 @@ const tempTextMap = {
 };
 
 const mapVars = {
+	"LapTime_norm": "Lap Time* (s)",
+	"LapNumber": "Lap #",
+	"TyreLife": "TyreLife (laps)",
+	"TrackTemp": "TrackTemp (°C)",
+	"Rainfall": "Wheather",
+	"Driver": 'Driver',
+	"Track": 'Track',
+	"Compound": 'Tyre',
+};
+
+const mapVars2 = {
 	"LapTime_norm": "Lap Time*",
-	"LapNumber": "Lap Number",
-	"TyreLife": "Tyre Life",
-	"TrackTemp": "Track Temperature",
-	"Rainfall": "Rainfall",
+	"LapNumber": "Lap #",
+	"TyreLife": "TyreLife",
+	"TrackTemp": "TrackTemp",
+	"Rainfall": "Wheather",
+	"Driver": 'Driver',
+	"Track": 'Track',
+	"Compound": 'Tyre',
+};
+
+
+const pcAxisMap = {
+	'HARD' : 'Hard',
+	'INTERMEDIATE' : 'Inter',
+	'MEDIUM' : 'Medium',
+	'SOFT' : 'Soft',
+	'WET' : 'Wet',
+}
+
+const pcAxisMapCaps = {
+	'HARD' : 'HARD',
+	'INTERMEDIATE' : 'INTER',
+	'MEDIUM' : 'MEDIUM',
+	'SOFT' : 'SOFT',
+	'WET' : 'WET',
+}
+
+const teamColorMap = {
+  "Mercedes": "#27F4D2",
+  "Red Bull Racing": "#363dc6ff",
+  "Ferrari": "#E80020",
+  "McLaren": "#FF8000",
+  "Alpine": "#ccc900ff",
+  "Aston Martin": "#229971",
+  "Haas F1 Team": "#77797aff",
+  "Williams": "#ffffffff",
+  "Kick Sauber": "#7b3b24ff",
+  "Racing Bulls": "#b12cd2"
+};
+
+const trackColorMap = {
+	"Melbourne": "#d22c2c",
+	"Shanghai": "#d2902c",
+	"Suzuka": "#b1d22c",
+	"Sakhir": "#b12cd2",
+	"Jeddah": "#2cd26e",
+	"Miami": "#2cd2d2",
+	"Imola": "#ffffffff",
+	"Monaco": "#4d2cd2",
+}
+
+
+const teamStringMap = {
+  "Mercedes": "Mercedes",
+  "Red Bull Racing": "Red Bull",
+  "Ferrari": "Ferrari",
+  "McLaren": "McLaren",
+  "Alpine": "Alpine",
+  "Aston Martin": "Aston Martin",
+  "Haas F1 Team": "Haas",
+  "Williams": "Williams",
+  "Kick Sauber": "Sauber",
+  "Racing Bulls": "Racing Bulls"
 };
