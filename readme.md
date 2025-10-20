@@ -4,6 +4,8 @@
 ![Plotly](https://img.shields.io/badge/Plotly-Dash-orange?logo=plotly)
 ![FastF1](https://img.shields.io/badge/Data-FastF1-lightgrey?logo=formula1)
 
+<img width="1914" height="861" alt="image" src="https://github.com/user-attachments/assets/e795c71c-b175-4b99-82af-f53876ab42a2" />
+
 ## 📊 Overview  
 This project presents an **interactive visual analytics dashboard** designed to explore Formula 1 lap data, focusing on **lap performance**, **tyre degradation**, and **team strategies**.  
 Developed as part of a university *Visual Analytics* project, the system transforms raw race telemetry into meaningful visual insights, helping users discover performance patterns and strategic trends across races.
