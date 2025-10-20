@@ -65,12 +65,4 @@ Developed in **Python**, combining data analytics and interactive visualization 
 - `Pandas`  
 - `Plotly` / `Dash`  
 - `Scikit-learn` (for PCA & clustering)
-
----
-
-## 🚀 How to Run  
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/<your-username>/F1-Visual-Analytics.git
    cd F1-Visual-Analytics
